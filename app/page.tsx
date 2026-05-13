@@ -124,7 +124,7 @@ export default function Home() {
   </div>
 </div>
   
-{/* Baner – WPT Global */}
+{/* Baner – GG */}
 <div className="w-full bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-gray-300/60 relative">
 
   {/* Subtelny glow */}
@@ -133,7 +133,7 @@ export default function Home() {
   {/* Logo */}
   <div className="flex-shrink-0 flex flex-col items-center w-40">
     <Image
-      src="/wptglobal.png"
+      src="/ggbet.png"
       alt="WPT Global Logo"
       width={200}
       height={200}
@@ -144,12 +144,12 @@ export default function Home() {
   {/* Treść */}
   <div className="flex-1 flex flex-col gap-2">
     <div className="bg-white/80 rounded-xl px-4 py-2 text-center text-lg font-bold mb-2 text-black shadow-sm">
-      Wygraj wyjazd na Battle of Malta!
+      200% BONUS POWITALNTY + 100FS
     </div>
 
     <div className="text-sm text-gray-800 mb-2">
       <span className="font-bold">Największe plusy:</span> 
-      Codzienne satelity o wyjazd na Battle of Malta! Start już od $1.10, a co tydzień także w darmowych freerollach!
+      200% bonusu powitalnego, oraz 100 darmowych spinów na Big Bass Splash!
     </div>
   </div>
 
@@ -171,7 +171,7 @@ export default function Home() {
     </button>
 
     <a
-      href="https://tracking.wptpartners.com/visit/?bta=36435&nci=13695"
+      href="https://ggbetbestoffer.com/l/6a032e38edf23c90d403a0e2?sub_id=kasjo&sub_id_2=ig"
       target="_blank"
       rel="noopener noreferrer"
       className="w-full"
@@ -181,8 +181,8 @@ export default function Home() {
         className="bg-gradient-to-r from-gray-800 to-black text-white rounded-full px-4 py-2 font-bold text-sm shadow-md border border-gray-400 transition-all duration-300 mt-2 w-full hover:scale-105 hover:from-black hover:to-gray-800"
         onClick={() =>
           (window as any).gtag?.('event', 'external_click', {
-            link_url: 'https://tracking.wptpartners.com/visit/?bta=36435&nci=13695',
-            banner: 'WPT Global',
+            link_url: 'https://ggbetbestoffer.com/l/6a032e38edf23c90d403a0e2?sub_id=kasjo&sub_id_2=ig',
+            banner: 'GG',
           })
         }
       >
