@@ -1,20 +1,20 @@
 "use client";
 
 export default function WagerRacePage() {
-  const rewards = {
-    1: "3500 zł",
-    2: "1500 zł",
-    3: "1000 zł",
-    4: "500 zł",
-    5: "400 zł",
-    6: "300 zł",
-    7: "200 zł",
-    8: "150 zł",
-    9: "100 zł",
-    10: "100 zł",
+  const rewards: Record<number, string> = {
+    1: "3500 PLN",
+    2: "1500 PLN",
+    3: "1000 PLN",
+    4: "500 PLN",
+    5: "400 PLN",
+    6: "300 PLN",
+    7: "200 PLN",
+    8: "150 PLN",
+    9: "100 PLN",
+    10: "100 PLN",
   };
 
-  const data = [
+  const data: [string, number][] = [
     ["Nikson201", 22745.48],
     ["Dieselek20", 18754.18],
     ["Jaro94", 18260.81],
@@ -37,13 +37,13 @@ export default function WagerRacePage() {
     ["BrooShon", 1843.72],
   ];
 
-  const mask = (name) => {
+  const mask = (name: string) => {
     if (!name) return "";
     if (name.length <= 4) return name;
     return name.slice(0, 2) + "****" + name.slice(-2);
   };
 
-  const formatMoney = (x) => {
+  const formatMoney = (x: number) => {
     return Number(x).toLocaleString("en-US", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
@@ -58,7 +58,7 @@ export default function WagerRacePage() {
         <div className="text-center mb-10">
           <h1 className="text-4xl font-extrabold">🏁 WAGER RACE</h1>
           <p className="text-white/50 mt-2">
-            TOP 10 zgarnia nagrody — reszta nadal walczy
+            TOP 10 zgarnia nagrody • reszta nadal walczy
           </p>
         </div>
 
@@ -73,14 +73,14 @@ export default function WagerRacePage() {
           </div>
 
           {/* ROWS */}
-          {data.map((item, i) => {
-            const place = i + 1;
+          {data.map((item, index) => {
+            const place = index + 1;
             const name = item[0];
             const wager = item[1];
 
             return (
               <div
-                key={i}
+                key={index}
                 className="grid grid-cols-3 p-4 border-b border-white/5 hover:bg-red-950/30 transition"
               >
 
