@@ -52,15 +52,15 @@ export default function Home() {
 
   
 {/* Baner – Stake (TOP1) */}
-<div className="w-full bg-gradient-to-br from-[#7F1D1D] via-[#B91C1C] to-[#450A0A] rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-red-700/60 relative overflow-hidden">
+<div className="w-full bg-gradient-to-br from-[#7F1D1D] via-[#B91C1C] to-[#450A0A] rounded-3xl p-8 pt-12 pl-12 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-red-700/60 relative">
 
   {/* TOP badge */}
-  <div className="absolute -top-6 -left-6 rotate-[-12deg] bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-black text-sm font-extrabold px-6 py-2 rounded-md shadow-2xl animate-pulse border border-yellow-200 z-20">
+  <div className="absolute -top-5 -left-5 rotate-[-12deg] bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-black text-sm font-extrabold px-6 py-2 rounded-md shadow-2xl animate-pulse border border-yellow-200 z-20">
     🏆 TOP1
   </div>
 
   {/* glow */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,215,0,0.25),transparent_45%)] pointer-events-none" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,215,0,0.25),transparent_45%)] pointer-events-none rounded-3xl" />
 
   {/* logo */}
   <div className="flex-shrink-0 flex flex-col items-center w-40 relative z-10">
