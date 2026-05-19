@@ -58,7 +58,7 @@ export default function WagerRacePage() {
         <div className="text-center mb-10">
           <h1 className="text-4xl font-extrabold">🏁 WAGER RACE</h1>
           <p className="text-white/50 mt-2">
-            TOP 10 zgarnia nagrody • reszta nadal walczy
+            WAGER RACE - MAJ 2026
           </p>
         </div>
 
