@@ -52,7 +52,7 @@ export default function Home() {
 
   
 {/* Baner – Stake (TOP1) */}
-<div className="w-full bg-gradient-to-br from-[#7F1D1D] via-[#B91C1C] to-[#450A0A] rounded-3xl p-8 pb-24 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-red-700/60 relative overflow-hidden">
+<div className="w-full bg-gradient-to-br from-[#7F1D1D] via-[#B91C1C] to-[#450A0A] rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-red-700/60 relative overflow-hidden">
 
   {/* TOP badge */}
   <div className="absolute -top-6 -left-6 rotate-[-12deg] bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-black text-sm font-extrabold px-6 py-2 rounded-md shadow-2xl animate-pulse border border-yellow-200 z-20">
@@ -75,7 +75,7 @@ export default function Home() {
 
   {/* content */}
   <div className="flex-1 flex flex-col gap-2 relative z-10">
-    <div className="bg-[#2A0A0A]/80 rounded-xl px-4 py-2 text-center text-lg font-bold mb-2 text-white">
+    <div className="bg-[#2A0A0A]/80 rounded-xl px-4 py-2 text-center text-lg font-bold text-white">
       3,5% DOŻYWOTNIEGO ZWROTU!
     </div>
 
@@ -87,7 +87,7 @@ export default function Home() {
 
   {/* CTA */}
   <div className="flex flex-col gap-2 w-40 relative z-10">
-    <span className="text-xs text-gray-300 mb-1 text-center">
+    <span className="text-xs text-gray-300 text-center">
       Kliknij aby skopiować
     </span>
 
@@ -96,9 +96,9 @@ export default function Home() {
       type="button"
       onClick={() => {
         navigator.clipboard.writeText("KASJO");
-        (window as any).gtag?.('event', 'copy_code', {
-          code: 'KASJOWIN',
-          banner: 'Stake',
+        (window as any).gtag?.("event", "copy_code", {
+          code: "KASJOWIN",
+          banner: "Stake",
         });
       }}
     >
@@ -116,16 +116,15 @@ export default function Home() {
         Odbierz bonus →
       </button>
     </a>
-  </div>
 
-  {/* WAGER RACE BUTTON */}
-  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20">
-    <a href="/wager-race">
+    {/* WAGER RACE BUTTON */}
+    <a href="/wager-race" className="w-full">
       <button
-        className="bg-white text-red-700 font-extrabold px-10 py-3 rounded-full shadow-2xl border-2 border-red-200 hover:scale-105 transition relative overflow-hidden"
+        type="button"
+        className="w-full mt-2 bg-white text-red-700 font-extrabold px-4 py-3 rounded-full shadow-xl border-2 border-red-200 hover:scale-105 transition"
         onClick={() =>
-          (window as any).gtag?.('event', 'wager_race_click', {
-            banner: 'Stake',
+          (window as any).gtag?.("event", "wager_race_click", {
+            banner: "Stake",
           })
         }
       >
