@@ -50,23 +50,45 @@ export default function WagerRacePage() {
     });
   };
 
+  const medal = (place: number) => {
+    if (place === 1) return "🥇";
+    if (place === 2) return "🥈";
+    if (place === 3) return "🥉";
+    return "";
+  };
+
+  const rowStyle = (place: number) => {
+    if (place === 1) return "bg-yellow-500/10";
+    if (place === 2) return "bg-gray-300/10";
+    if (place === 3) return "bg-orange-500/10";
+    return "hover:bg-red-950/30 transition";
+  };
+
+  const prizeColor = (place: number) => {
+    if (place <= 3) return "text-yellow-300 font-extrabold";
+    if (place <= 10) return "text-yellow-400 font-bold";
+    return "text-white/30";
+  };
+
   return (
     <div className="min-h-screen bg-[#111112] text-white px-4 py-10">
       <div className="max-w-6xl mx-auto">
 
         {/* HEADER */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-extrabold">🏁 WAGER RACE</h1>
+          <h1 className="text-4xl font-extrabold tracking-wide">
+            🏁 WAGER RACE
+          </h1>
           <p className="text-white/50 mt-2">
-            STAKE - MAJ 2026
+            TOP 20 leaderboard • LIVE RANKING
           </p>
         </div>
 
         {/* TABLE */}
-        <div className="rounded-2xl overflow-hidden border border-red-900">
+        <div className="rounded-2xl overflow-hidden border border-red-900 shadow-xl">
 
           {/* HEADER ROW */}
-          <div className="grid grid-cols-3 bg-[#1a1010] p-4 text-red-300 font-bold text-sm">
+          <div className="grid grid-cols-3 bg-[#1a1010] p-4 text-red-300 font-bold text-sm uppercase">
             <div>Gracz</div>
             <div>Wager</div>
             <div>Nagroda</div>
@@ -81,11 +103,14 @@ export default function WagerRacePage() {
             return (
               <div
                 key={index}
-                className="grid grid-cols-3 p-4 border-b border-white/5 hover:bg-red-950/30 transition"
+                className={`grid grid-cols-3 p-4 border-b border-white/5 ${rowStyle(place)}`}
               >
 
                 {/* LOGIN */}
-                <div className="font-semibold">
+                <div className="font-semibold flex items-center gap-2">
+                  <span className="text-lg">
+                    {medal(place)}
+                  </span>
                   {mask(name)}
                 </div>
 
@@ -95,16 +120,8 @@ export default function WagerRacePage() {
                 </div>
 
                 {/* PRIZE */}
-                <div>
-                  {place <= 10 ? (
-                    <span className="text-yellow-400 font-bold">
-                      {rewards[place]}
-                    </span>
-                  ) : (
-                    <span className="text-white/30">
-                      
-                    </span>
-                  )}
+                <div className={prizeColor(place)}>
+                  {place <= 10 ? rewards[place] : "w grze o TOP10"}
                 </div>
 
               </div>
