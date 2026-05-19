@@ -1,4 +1,3 @@
-
 "use client";
 
 export default function WagerRacePage() {
@@ -38,14 +37,17 @@ export default function WagerRacePage() {
     ["BrooShon", 1843.72],
   ];
 
-  const maskLogin = (login: string) => {
-    if (login.length <= 4) return login;
+  const mask = (name) => {
+    if (!name) return "";
+    if (name.length <= 4) return name;
+    return name.slice(0, 2) + "****" + name.slice(-2);
+  };
 
-    const start = login.slice(0, 2);
-    const end = login.slice(-2);
-    const middle = "*".repeat(Math.max(2, login.length - 4));
-
-    return `${start}${middle}${end}`;
+  const formatMoney = (x) => {
+    return Number(x).toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
   };
 
   return (
@@ -54,57 +56,52 @@ export default function WagerRacePage() {
 
         {/* HEADER */}
         <div className="text-center mb-10">
-          <h1 className="text-5xl font-extrabold tracking-wide">
-            🏁 WAGER RACE
-          </h1>
-          <p className="text-white/60 mt-2">
-            TOP 10 zgarnia nagrody • reszta walczy dalej
+          <h1 className="text-4xl font-extrabold">🏁 WAGER RACE</h1>
+          <p className="text-white/50 mt-2">
+            TOP 10 zgarnia nagrody — reszta nadal walczy
           </p>
         </div>
 
         {/* TABLE */}
-        <div className="rounded-2xl overflow-hidden border border-red-800 shadow-2xl">
-          
+        <div className="rounded-2xl overflow-hidden border border-red-900">
+
           {/* HEADER ROW */}
-          <div className="grid grid-cols-3 bg-[#1a1010] text-red-300 font-bold p-4 text-sm uppercase tracking-wider">
+          <div className="grid grid-cols-3 bg-[#1a1010] p-4 text-red-300 font-bold text-sm">
             <div>Gracz</div>
             <div>Wager</div>
             <div>Nagroda</div>
           </div>
 
           {/* ROWS */}
-          {data.map(([login, wager], index) => {
-            const place = index + 1;
-            const isTop10 = place <= 10;
+          {data.map((item, i) => {
+            const place = i + 1;
+            const name = item[0];
+            const wager = item[1];
 
             return (
               <div
-                key={login}
-                className={`grid grid-cols-3 p-4 text-sm border-b border-white/5 
-                ${place === 1 ? "bg-yellow-500/10" : ""}
-                ${place === 2 ? "bg-gray-300/10" : ""}
-                ${place === 3 ? "bg-orange-500/10" : ""}
-                hover:bg-red-950/30 transition`}
+                key={i}
+                className="grid grid-cols-3 p-4 border-b border-white/5 hover:bg-red-950/30 transition"
               >
-                
+
                 {/* LOGIN */}
-                <div className="font-semibold tracking-wide">
-                  {maskLogin(login)}
+                <div className="font-semibold">
+                  {mask(name)}
                 </div>
 
                 {/* WAGER */}
                 <div className="text-white/80">
-                  ${wager.toLocaleString()}
+                  ${formatMoney(wager)}
                 </div>
 
                 {/* PRIZE */}
                 <div>
-                  {isTop10 ? (
+                  {place <= 10 ? (
                     <span className="text-yellow-400 font-bold">
-                      {rewards[place as keyof typeof rewards]}
+                      {rewards[place]}
                     </span>
                   ) : (
-                    <span className="text-white/30 italic">
+                    <span className="text-white/30">
                       w grze o TOP10
                     </span>
                   )}
@@ -113,11 +110,7 @@ export default function WagerRacePage() {
               </div>
             );
           })}
-        </div>
 
-        {/* FOOTER INFO */}
-        <div className="text-center mt-6 text-white/40 text-sm">
-          Aktualizowane na żywo • walcz o TOP10 🔥
         </div>
 
       </div>
