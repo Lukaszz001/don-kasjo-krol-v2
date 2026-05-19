@@ -77,10 +77,10 @@ export default function WagerRacePage() {
         {/* HEADER */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-extrabold tracking-wide">
-            🏁 WAGER RACE
+            🏁 STAKE.COM WAGER RACE
           </h1>
           <p className="text-white/50 mt-2">
-            TOP 20 leaderboard • LIVE RANKING
+            MAJ 2026
           </p>
         </div>
 
@@ -88,7 +88,8 @@ export default function WagerRacePage() {
         <div className="rounded-2xl overflow-hidden border border-red-900 shadow-xl">
 
           {/* HEADER ROW */}
-          <div className="grid grid-cols-3 bg-[#1a1010] p-4 text-red-300 font-bold text-sm uppercase">
+          <div className="grid grid-cols-4 bg-[#1a1010] p-4 text-red-300 font-bold text-sm uppercase">
+            <div>#</div>
             <div>Gracz</div>
             <div>Wager</div>
             <div>Nagroda</div>
@@ -103,14 +104,17 @@ export default function WagerRacePage() {
             return (
               <div
                 key={index}
-                className={`grid grid-cols-3 p-4 border-b border-white/5 ${rowStyle(place)}`}
+                className={`grid grid-cols-4 p-4 border-b border-white/5 ${rowStyle(place)}`}
               >
+
+                {/* PLACE */}
+                <div className="text-white/40 font-bold">
+                  {place}
+                </div>
 
                 {/* LOGIN */}
                 <div className="font-semibold flex items-center gap-2">
-                  <span className="text-lg">
-                    {medal(place)}
-                  </span>
+                  <span>{medal(place)}</span>
                   {mask(name)}
                 </div>
 
@@ -121,7 +125,7 @@ export default function WagerRacePage() {
 
                 {/* PRIZE */}
                 <div className={prizeColor(place)}>
-                  {place <= 10 ? rewards[place] : "w grze o TOP10"}
+                  {place <= 10 ? rewards[place] : ""}
                 </div>
 
               </div>
