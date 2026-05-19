@@ -102,7 +102,7 @@ export default function WagerRacePage() {
                     </span>
                   ) : (
                     <span className="text-white/30">
-                      w grze o TOP10
+                      
                     </span>
                   )}
                 </div>
