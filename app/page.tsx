@@ -52,18 +52,18 @@ export default function Home() {
 
   
 {/* Baner – Stake (TOP1) */}
-<div className="w-full bg-gradient-to-br from-[#7F1D1D] via-[#B91C1C] to-[#450A0A] rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-red-700/60 relative">
+<div className="w-full bg-gradient-to-br from-[#7F1D1D] via-[#B91C1C] to-[#450A0A] rounded-3xl p-8 pb-24 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-red-700/60 relative overflow-hidden">
 
-  {/* Naklejka TOP1 */}
+  {/* TOP badge */}
   <div className="absolute -top-6 -left-6 rotate-[-12deg] bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-black text-sm font-extrabold px-6 py-2 rounded-md shadow-2xl animate-pulse border border-yellow-200 z-20">
     🏆 TOP1
   </div>
 
-  {/* Glow effect */}
+  {/* glow */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,215,0,0.25),transparent_45%)] pointer-events-none" />
 
-  {/* Logo */}
-  <div className="flex-shrink-0 flex flex-col items-center w-40">
+  {/* logo */}
+  <div className="flex-shrink-0 flex flex-col items-center w-40 relative z-10">
     <Image
       src="/stake.png"
       alt="Stake Logo"
@@ -73,52 +73,63 @@ export default function Home() {
     />
   </div>
 
-  {/* Treść */}
-  <div className="flex-1 flex flex-col gap-2">
-    <div className="bg-[#2A0A0A]/80 rounded-xl px-4 py-2 text-center text-lg font-bold mb-2 text-white drop-shadow-[0_1px_6px_rgba(255,215,0,0.6)]">
+  {/* content */}
+  <div className="flex-1 flex flex-col gap-2 relative z-10">
+    <div className="bg-[#2A0A0A]/80 rounded-xl px-4 py-2 text-center text-lg font-bold mb-2 text-white">
       3,5% DOŻYWOTNIEGO ZWROTU!
     </div>
 
-    <div className="text-sm text-gray-100 mb-2">
-      <span className="font-bold">Największe plusy:</span> 
-      Z kodem KASJOWIN 3.5% dożywotniego rakebacku, codzienne turnieje z wysokimi nagrodami.
+    <div className="text-sm text-gray-100">
+      <span className="font-bold">Największe plusy:</span>{" "}
+      Z kodem KASJOWIN 3.5% rakeback + turnieje + bonusy VIP.
     </div>
   </div>
 
   {/* CTA */}
   <div className="flex flex-col gap-2 w-40 relative z-10">
     <span className="text-xs text-gray-300 mb-1 text-center">
-      Kliknij, aby skopiować.
+      Kliknij aby skopiować
     </span>
 
     <button
-      className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 text-black rounded-full px-4 py-2 font-bold text-sm shadow-lg border border-yellow-200 transition-all duration-300 hover:scale-105"
+      className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 text-black rounded-full px-4 py-2 font-bold text-sm shadow-lg border border-yellow-200 hover:scale-105 transition"
       type="button"
       onClick={() => {
-        handleCopySpinbara();
-        (window as any).gtag?.('event', 'copy_code', { code: 'KASJOWIN', banner: 'Stake' });
+        navigator.clipboard.writeText("KASJO");
+        (window as any).gtag?.('event', 'copy_code', {
+          code: 'KASJOWIN',
+          banner: 'Stake',
+        });
       }}
     >
-      {copiedSpinbara ? "Skopiowano" : "KOD: KASJOWIN"}
+      KOD: KASJOWIN
     </button>
 
     <a
       href="https://stake.jp/?offer=kasjowin&c=KasjoWin"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-full"
     >
       <button
-        type="button"
-        className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 text-black rounded-full px-4 py-2 font-bold text-sm shadow-lg border border-yellow-200 transition-all duration-300 mt-2 w-full hover:scale-105"
+        className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 text-black rounded-full px-4 py-2 font-bold text-sm shadow-lg border border-yellow-200 hover:scale-105 transition w-full"
+      >
+        Odbierz bonus →
+      </button>
+    </a>
+  </div>
+
+  {/* WAGER RACE BUTTON */}
+  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20">
+    <a href="/wager-race">
+      <button
+        className="bg-white text-red-700 font-extrabold px-10 py-3 rounded-full shadow-2xl border-2 border-red-200 hover:scale-105 transition relative overflow-hidden"
         onClick={() =>
-          (window as any).gtag?.('event', 'external_click', {
-            link_url: 'https://stake.jp/?offer=kasjowin&c=KasjoWin',
+          (window as any).gtag?.('event', 'wager_race_click', {
             banner: 'Stake',
           })
         }
       >
-        Odbierz bonusy →
+        🏁 WAGER RACE
       </button>
     </a>
   </div>
