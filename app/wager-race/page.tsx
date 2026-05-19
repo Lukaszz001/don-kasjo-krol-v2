@@ -71,7 +71,7 @@ export default function WagerRacePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#111112] text-white px-4 py-10">
+    <div className="min-h-screen bg-[#111112] text-white px-3 md:px-4 py-10">
       <div className="max-w-6xl mx-auto">
 
         {/* HEADER */}
@@ -88,11 +88,11 @@ export default function WagerRacePage() {
         <div className="rounded-2xl overflow-hidden border border-red-900 shadow-xl">
 
           {/* HEADER ROW */}
-          <div className="grid grid-cols-4 bg-[#1a1010] p-4 text-red-300 font-bold text-sm uppercase">
-            <div>#</div>
-            <div>Gracz</div>
-            <div>Wager</div>
-            <div>Nagroda</div>
+          <div className="grid grid-cols-4 bg-[#1a1010] p-3 md:p-4 text-red-300 font-bold text-xs md:text-sm uppercase">
+            <div className="w-10 md:w-16">#</div>
+            <div className="truncate">Gracz</div>
+            <div className="text-right md:text-left">Wager</div>
+            <div className="text-right md:text-left">Nagroda</div>
           </div>
 
           {/* ROWS */}
@@ -104,27 +104,27 @@ export default function WagerRacePage() {
             return (
               <div
                 key={index}
-                className={`grid grid-cols-4 p-4 border-b border-white/5 ${rowStyle(place)}`}
+                className={`grid grid-cols-4 items-center p-3 md:p-4 border-b border-white/5 ${rowStyle(place)}`}
               >
 
                 {/* PLACE */}
-                <div className="text-white/40 font-bold">
+                <div className="w-10 md:w-16 text-white/40 font-bold">
                   {place}
                 </div>
 
                 {/* LOGIN */}
-                <div className="font-semibold flex items-center gap-2">
+                <div className="font-semibold flex items-center gap-1 md:gap-2 truncate">
                   <span>{medal(place)}</span>
-                  {mask(name)}
+                  <span className="truncate">{mask(name)}</span>
                 </div>
 
                 {/* WAGER */}
-                <div className="text-white/80">
+                <div className="text-white/80 text-right md:text-left text-sm md:text-base">
                   ${formatMoney(wager)}
                 </div>
 
                 {/* PRIZE */}
-                <div className={prizeColor(place)}>
+                <div className={`text-right md:text-left text-sm md:text-base ${prizeColor(place)}`}>
                   {place <= 10 ? rewards[place] : ""}
                 </div>
 
