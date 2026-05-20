@@ -202,6 +202,51 @@ export default function Home() {
   </div>
 </div>
 
+    {/* Baner – Punter */}
+<div className="w-full bg-gradient-to-br from-[#4B2E1E] via-[#6B3E26] to-[#2E1A12] rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-[#6B3E26]/60 relative">
+  
+  <div className="flex-shrink-0 flex flex-col items-center w-40">
+    <Image
+      src="/punter2.png"
+      alt="Punter Logo"
+      width={200}
+      height={200}
+      className="mb-2"
+    />
+  </div>
+
+  <div className="flex-1 flex flex-col gap-2">
+    <div className="bg-[#1E120C]/80 rounded-xl px-4 py-2 text-center text-lg font-bold mb-2 text-white drop-shadow-[0_1px_4px_#6B3E26cc]">
+      100% BONUS POWITALNY + 200 FS
+    </div>
+
+    <div className="text-sm text-gray-100 mb-2">
+      <span className="font-bold">Największe plusy:</span> Bonus powitalny 100% aż do 2250 PLN + 200 darmowych spinów!
+    </div>
+  </div>
+
+  <div className="flex flex-col gap-2 w-40 relative">
+    <a
+      href="https://mrp.naralvin.com/?mid=357160_2060521"
+      className="group"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button
+        className="bg-gradient-to-r from-[#4B2E1E] via-[#6B3E26] to-[#2E1A12] cursor-pointer hover:from-[#2E1A12] hover:to-[#4B2E1E] text-white rounded-full px-4 py-2 font-bold text-sm drop-shadow-[0_1px_4px_#6B3E26cc] border border-white border-opacity-80 border-[1.5px] transition-all duration-300 w-full"
+        onClick={() =>
+          (window as any).gtag?.("event", "external_click", {
+            link_url: "https://mrp.naralvin.com/?mid=357160_2060521",
+            banner: "Punter",
+          })
+        }
+      >
+        Odbierz bonusy →
+      </button>
+    </a>
+  </div>
+</div>
+
  {/* Baner – Slotuna */}
 <div className="w-full bg-gradient-to-br from-[#0A1F44] via-[#1E4ED8] to-[#050E24] rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-[#1E4ED8]/60 relative">
 
@@ -352,50 +397,7 @@ export default function Home() {
  
 
 
-  {/* Baner – Punter */}
-<div className="w-full bg-gradient-to-br from-[#4B2E1E] via-[#6B3E26] to-[#2E1A12] rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6 shadow-xl border border-[#6B3E26]/60 relative">
-  
-  <div className="flex-shrink-0 flex flex-col items-center w-40">
-    <Image
-      src="/punter2.png"
-      alt="Punter Logo"
-      width={200}
-      height={200}
-      className="mb-2"
-    />
-  </div>
 
-  <div className="flex-1 flex flex-col gap-2">
-    <div className="bg-[#1E120C]/80 rounded-xl px-4 py-2 text-center text-lg font-bold mb-2 text-white drop-shadow-[0_1px_4px_#6B3E26cc]">
-      100% BONUS POWITALNY + 200 FS
-    </div>
-
-    <div className="text-sm text-gray-100 mb-2">
-      <span className="font-bold">Największe plusy:</span> Bonus powitalny 100% aż do 2250 PLN + 200 darmowych spinów!
-    </div>
-  </div>
-
-  <div className="flex flex-col gap-2 w-40 relative">
-    <a
-      href="https://mrp.naralvin.com/?mid=357160_2060521"
-      className="group"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <button
-        className="bg-gradient-to-r from-[#4B2E1E] via-[#6B3E26] to-[#2E1A12] cursor-pointer hover:from-[#2E1A12] hover:to-[#4B2E1E] text-white rounded-full px-4 py-2 font-bold text-sm drop-shadow-[0_1px_4px_#6B3E26cc] border border-white border-opacity-80 border-[1.5px] transition-all duration-300 w-full"
-        onClick={() =>
-          (window as any).gtag?.("event", "external_click", {
-            link_url: "https://mrp.naralvin.com/?mid=357160_2060521",
-            banner: "Punter",
-          })
-        }
-      >
-        Odbierz bonusy →
-      </button>
-    </a>
-  </div>
-</div>
 
 
 </div>
