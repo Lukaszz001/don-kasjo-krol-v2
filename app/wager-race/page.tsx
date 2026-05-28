@@ -80,7 +80,7 @@ const data: [string, number][] = [
             🏁 STAKE.COM WAGER RACE
           </h1>
           <p className="text-white/50 mt-2">
-            MAJ 2026 (Aktualizacja: 26/05)
+            MAJ 2026 (Aktualizacja: 29/05)
           </p>
         </div>
 
