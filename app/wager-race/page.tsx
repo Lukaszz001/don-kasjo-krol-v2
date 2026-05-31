@@ -15,26 +15,26 @@ export default function WagerRacePage() {
   };
 
 const data: [string, number][] = [
-  ["Nikson201", 45664.53],
-  ["Dieselek20", 31265.92],
-  ["Jaro94", 25892.97],
-  ["Blazej725", 19807.57],
-  ["PatrykP1312", 15703.28],
-  ["nattyso", 10098.09],
-  ["Stefkaa1993", 8731.43],
-  ["Robson9418", 6040.94],
-  ["lordszympek", 6034.92],
-  ["Lukix333", 5376.47],
-  ["aveNgda", 4141.62],
+  ["Nikson201", 48214.93],
+  ["Dieselek20", 31299.41],
+  ["Jaro94", 25894.07],
+  ["Blazej725", 19808.38],
+  ["PatrykP1312", 16466.18],
+  ["nattyso", 10258.45],
+  ["Stefkaa1993", 8882.74],
+  ["lordszympek", 6716.40],
+  ["Robson9418", 6123.57],
+  ["Lukix333", 5622.02],
+  ["Klaaudynka4", 5499.75],
+  ["aveNgda", 4359.38],
+  ["DawajMilion", 4136.13],
   ["BenShelton420", 3709.63],
-  ["pysiawercia", 3512.22],
-  ["Klaaudynka4", 3508.07],
-  ["Martyna6767", 2761.62],
-  ["Pawxioo", 2737.56],
-  ["GR3G0R996", 2695.65],
-  ["Olguchaos", 2693.98],
-  ["dawidziooor19", 2419.27],
-  ["osatokrol", 2394.59],
+  ["pysiawercia", 3675.21],
+  ["Lysinek82629", 3499.02],
+  ["bakajoko", 3198.70],
+  ["Martyna6767", 2939.91],
+  ["GR3G0R996", 2744.16],
+  ["Pawxioo", 2737.58],
 ];
 
   const mask = (name: string) => {
@@ -80,7 +80,7 @@ const data: [string, number][] = [
             🏁 STAKE.COM WAGER RACE
           </h1>
           <p className="text-white/50 mt-2">
-            MAJ 2026 (Aktualizacja: 29/05)
+            MAJ 2026 (Aktualizacja: 31/05)
           </p>
         </div>
 
