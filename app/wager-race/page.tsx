@@ -15,26 +15,26 @@ export default function WagerRacePage() {
   };
 
 const data: [string, number][] = [
-  ["Nikson201", 50742.98],
-  ["Dieselek20", 31366.57],
-  ["Jaro94", 25933.47],
-  ["Blazej725", 19808.38],
-  ["PatrykP1312", 16466.18],
-  ["nattyso", 10935.40],
-  ["Stefkaa1993", 9013.98],
-  ["lordszympek", 6809.21],
-  ["Robson9418", 6241.18],
-  ["Lukix333", 5627.29],
-  ["Klaaudynka4", 5515.62],
-  ["aveNgda", 4754.92],
-  ["DawajMilion", 4448.73],
-  ["pysiawercia", 3876.37],
-  ["BenShelton420", 3843.28],
-  ["Lysinek82629", 3717.40],
-  ["bakajoko", 3355.08],
-  ["Martyna6767", 3008.09],
-  ["GR3G0R996", 2871.44],
-  ["Pawxioo", 2737.80],
+  ["Degenerat365", 9549.67],
+  ["Dieselek20", 6909.69],
+  ["Maciek703", 6066.33],
+  ["bberni1234", 5388.46],
+  ["Lukix333", 3530.87],
+  ["Nikson201", 3454.70],
+  ["Klaaudynka4", 3052.24],
+  ["N5ive", 2933.16],
+  ["Lajgota", 2562.13],
+  ["Lysinek82629", 1920.47],
+  ["aveNgda", 1486.19],
+  ["Stefkaa1993", 1451.58],
+  ["bakajoko", 1417.73],
+  ["PabloElCzepec", 1270.25],
+  ["patryczekszew", 1179.81],
+  ["nattyso", 1161.93],
+  ["Robson9418", 1145.27],
+  ["Koksownik12", 913.22],
+  ["Kotszef", 852.75],
+  ["KrzosuMTS", 788.77],
 ];
 
   const mask = (name: string) => {
@@ -80,7 +80,7 @@ const data: [string, number][] = [
             🏁 STAKE.COM WAGER RACE
           </h1>
           <p className="text-white/50 mt-2">
-            MAJ 2026 - RANKING KOŃCOWY
+            CZERWIEC 2026 - AKTUALIZACJA 07/06
           </p>
         </div>
 
