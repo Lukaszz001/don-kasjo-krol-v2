@@ -15,26 +15,26 @@ export default function WagerRacePage() {
   };
 
 const data: [string, number][] = [
-  ["Dieselek20", 50516.54],
-  ["Nikson201", 45694.12],
+  ["Nikson201", 53889.48],
+  ["Dieselek20", 51025.42],
   ["Blazej725", 30237.13],
-  ["lordszympek", 18972.54],
+  ["lordszympek", 19039.69],
   ["bberni1234", 11689.46],
-  ["Lukix333", 10032.08],
-  ["Degenerat365", 9871.66],
-  ["bakajoko", 9477.07],
+  ["Lukix333", 10905.56],
+  ["bakajoko", 10281.49],
+  ["Degenerat365", 9905.19],
   ["Lysinek82629", 8993.08],
-  ["Lajgota", 8724.92],
+  ["Lajgota", 8726.45],
   ["nattyso", 8273.18],
-  ["Stefkaa1993", 7569.28],
+  ["Stefkaa1993", 7654.95],
   ["Maciek703", 7135.69],
-  ["Klaaudynka4", 6186.14],
-  ["PabloElCzepec", 5872.13],
+  ["mikron1337", 7037.22],
+  ["Klaaudynka4", 6260.96],
+  ["PabloElCzepec", 5873.36],
+  ["sikora34", 5757.81],
   ["Maniekmachna", 5242.32],
-  ["Robson9418", 4362.23],
-  ["Dybo87", 4353.83],
-  ["sikora34", 4205.77],
-  ["patryczekszew", 4080.82],
+  ["Dybo87", 5188.56],
+  ["patryczekszew", 4493.88],
 ];
 
   const mask = (name: string) => {
@@ -80,7 +80,7 @@ const data: [string, number][] = [
             🏁 STAKE.COM WAGER RACE
           </h1>
           <p className="text-white/50 mt-2">
-            CZERWIEC 2026 - AKTUALIZACJA 28/06
+            CZERWIEC 2026 - AKTUALIZACJA 29/06
           </p>
         </div>
 
